@@ -1,0 +1,17 @@
+Package: MSScvm
+Title: Automated Cloud Masking for Landsat MSS Images 
+Version: 1.0.0
+Date: 2015-07-23
+Authors@R: c(person("Justin", "Braaten", email = "jstnbraaten@gmail.com", role = c("aut", "cre")),
+    person("Warren", "Cohen", email = "warren.cohen@oregonstate.edu", role = "aut"),
+    person("Zhiqiang", "Yang", email = "zhiqiang.yang@oregonstate.edu", role = "aut"))
+Description: An automated cloud and cloud shadow masking system for Landsat MSS imagery. It allows MSS imagery to more easily be used in large-area and time series analysis by providing an efficent way to prevent cloud and cloud shadow pixels from contaminating mosaics, composites, and time series.
+Depends: R (>= 3.2.1)
+Imports:
+  gdalUtils,
+  igraph,
+  raster,
+  rgdal,
+  SDMTools
+License: GPL-2
+LazyData: true
