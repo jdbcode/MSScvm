@@ -4,14 +4,16 @@
 \alias{mosaicDEMs}
 \title{Create a DEM mosaic from a direcory of DEM's}
 \usage{
-mosaicDEMs(dir, projRef, NAvalue)
+mosaicDEMs(dir, projRef, srcNodata = NA, dstNodata = -32768)
 }
 \arguments{
 \item{dir}{directory name (character). Full path to a directory containing digital elevation model (DEM) files to be mosaiced.}
 
 \item{projRef}{filename (character). Full path to an image file produced by the \code{\link{MSSunpack}} function.}
 
-\item{NAvalue}{numeric. What is the background value of the DEM files in the directory.}
+\item{srcNodata}{numeric. What is the background value of the DEM files in the directory. If there is no background value, use NA (default)}
+
+\item{dstNodata}{numeric. Specify the value to represent background pixels in the mosaic DEM. -32768 is the default}
 }
 \value{
 A GeoTIFF raster file representing the union of all individual DEM files found in the provided directory path. The mosaic file will be written to the
@@ -23,7 +25,7 @@ A helper function to create the large-extent DEM file required by the 'MSScvm' f
 \details{
 The provided directory path should only contain decompressed digital elevation files from the same source (SRTM, NED, GTOPO, etc).
 The function will search the directory and include all files found in the mosaic. It is important that each file have the same background value
-and that it is correctly assigned to the 'NAvalue' parameter, if not, intersection between DEMs could have unexpected results.
+and that it is correctly assigned to the 'srcNodata' parameter, if not, intersection between DEMs could have unexpected results.
 Each individual DEM file will be adjusted to match the projection and pixel resolution of the 'proRef' image.
 Then they will be merged using the mean value of intersecting pixels.
 }
@@ -32,7 +34,7 @@ Then they will be merged using the mean value of intersecting pixels.
 
 mosaicDEMs(dir = "C:/mss/dems",
            projRef = "C:/mss/LM10360321973191AAA04/LM10360321973191AAA04_dn.tif",
-           NAvalue = -32768)
+           srcNodata = -9999, dstNodata= -32768)
 }
 }
 \seealso{

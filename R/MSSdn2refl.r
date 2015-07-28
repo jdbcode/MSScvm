@@ -17,13 +17,14 @@
 
 MSSdn2refl = function(imgFile){
   
+  print(paste("Converting",basename(imgFile),"to TOA reflectance"))
   #link to the equations to convert DN to TOA and TOA to SR
   #http://landsathandbook.gsfc.nasa.gov/data_prod/prog_sect11_3.html
   
   #define the TOA reflectance function
   refl = function(imgFile, band, gain, bias, sunzen, d, esun){
     orig = raster::raster(imgFile, band) #read in the file
-    img = as.matrix(orig) #convert from raster to matrix
+    img = raster::as.matrix(orig) #convert from raster to matrix
     img = ((gain*img)+bias) #convert from DN to TOA radiance
     img[img < 0] = 0 #set all values less than 0 to 0 - negative radiance does not make sense
     img = (pi * img * (d^2))/(esun * cos(sunzen)) #convert from TOA radiance to TOA reflectance

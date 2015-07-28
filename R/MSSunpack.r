@@ -26,15 +26,15 @@
 MSSunpack = function(imgFile, toaRad=FALSE, toaRefl=FALSE, useL1G=FALSE){
   
   #figure out if this is an L1G image and stop the function according to the 'useL1G' parameter
+  print(paste("Unpacking and preparing",basename(imgFile)))
   tempdir = file.path(dirname(imgFile),"temp")
   untar(imgFile, exdir=tempdir)
-  if(useL1G == F){
-    mtlfile = list.files(tempdir, pattern = "MTL.txt", full.names = T, recursive = T) #find the mtl metadata file
-    info = getMetadata(mtlfile)
-    if(info$datatype == "L1G"){
+  mtlfile = list.files(tempdir, pattern = "MTL.txt", full.names = T, recursive = T) #find the mtl metadata file
+  info = getMetadata(mtlfile)
+  if(useL1G == F & info$datatype == "L1G"){
+      unlink(tempdir, recursive=T, force=T) #delete the temp folder and its contents
       print(paste("MSS file:",imgFile,"is L1G, if you want to use it, set the 'useL1G' parameter to TRUE"))
       stop("Stopping MSSunpack")
-    }
   }
   
   #get file and directory info
@@ -54,8 +54,8 @@ MSSunpack = function(imgFile, toaRad=FALSE, toaRefl=FALSE, useL1G=FALSE){
   newancfiles =  file.path(outdir, baseancfiles) #define the new filenames for ancillary files
   
   #start working with the image files - stack and set bad pixels to 0
-  s = stack(tiffiles[1],tiffiles[2],tiffiles[3],tiffiles[4]) #stack the band files
-  img = as.array(s) #convert to array for fastering processing
+  s = raster::stack(tiffiles[1],tiffiles[2],tiffiles[3],tiffiles[4]) #stack the band files
+  img = raster::as.array(s) #convert to array for fastering processing
   b1bads = img[,,1]>1 #finds bad image edge pixels that cause problems when mosaicing 
   b2bads = img[,,2]>1 #finds bad image edge pixels that cause problems when mosaicing
   b3bads = img[,,3]>1 #finds bad image edge pixels that cause problems when mosaicing

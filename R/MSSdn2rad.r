@@ -15,9 +15,10 @@
 
 MSSdn2rad = function(imgFile){
   
+  print(paste("Converting",basename(imgFile),"to TOA radiance"))
   info = getMetadata(imgFile) #get image metadata
   b = raster::brick(imgFile) #load the DN image as a brick
-  img = as.array(b)  #convert the brick to an array
+  img = raster::as.array(b)  #convert the brick to an array
 
   img[,,1] = round(100*((info$b1gain*img[,,1])+info$b1bias)) #convert fro DN to radiance and scale by 100 and round
   img[,,2] = round(100*((info$b2gain*img[,,2])+info$b2bias)) #convert fro DN to radiance and scale by 100 and round

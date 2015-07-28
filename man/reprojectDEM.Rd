@@ -4,12 +4,16 @@
 \alias{reprojectDEM}
 \title{Reproject a DEM file}
 \usage{
-reprojectDEM(demFile, projRef)
+reprojectDEM(demFile, projRef, srcNodata = NA, dstNodata = -32768)
 }
 \arguments{
 \item{demFile}{filename (character). Full path to DEM file.}
 
 \item{projRef}{filename (character). Full path to an image file produced by the \code{\link{MSSunpack}} function.}
+
+\item{srcNodata}{numeric. Specify the background value in the input DEM. If there is no background value, use NA (default)}
+
+\item{dstNodata}{numeric. Specify the value to represent background pixels in the reprojected DEM. -32768 is the default}
 }
 \value{
 A GeoTIFF raster file with '_reprojected.tif' replacing the last 4 characters of the input DEM filename
@@ -25,7 +29,8 @@ The DEM file will be adjusted to match the projection and pixel resolution of th
 \dontrun{
 
 reprojectDEM(demFile = "C:/mss/dem/wrs1_p036r032_dem.tif",
-             projRef = "C:/mss/LM10360321973191AAA04/LM10360321973191AAA04_dn.tif")
+             projRef = "C:/mss/LM10360321973191AAA04/LM10360321973191AAA04_dn.tif",
+             srcNodata= -9999, dstNodata= -32768)
 }
 }
 \seealso{

@@ -16,7 +16,9 @@
 
 
 MSScvm = function(imgDir, demFile, classify=F){
-
+  
+  
+  
   #get the image file and check
   files = list.files(imgDir, full.names=T)
   refl_match = grep("toa_reflectance.tif$", files)
@@ -36,12 +38,22 @@ MSScvm = function(imgDir, demFile, classify=F){
   }
   
   imgfile = files[match]
+  print(paste("Making cloud & shadow mask for",basename(imgfile)))
   
   #get some info about the image
   ref = raster::raster(imgfile) #read in the MSS file for information on image extent and as a template for holding values later
   dem = raster::raster(demFile) #read in the DEM file - raster package function
   demproj = raster::projection(dem)
   imgproj = raster::projection(ref)
+  demres = raster::xres(dem)
+  imgres = raster::xres(ref)
+  
+  #check to make the DEM and image resolutions are the same
+  if(demres != imgres){
+    print(paste("The DEM file:",demFile,"does not have the same pixel resolution as the image file."))
+    print("Please make sure the DEM file has the same pixel resolution as the image file. Use the function 'reprojectDEM' to assist in getting it in the same resolution")
+    stop("Stopping MSScvm")
+  }
   
   #check to make the DEM and image projections are the same
   if(demproj != imgproj){
@@ -99,12 +111,14 @@ MSScvm = function(imgDir, demFile, classify=F){
     b4 = refl(imgfile, 4 ,info$b4gain, info$b4bias, sunzen, d, esun[4]) #get TOA reflectance for MSS band 4
   } 
   
+
   if(imgtype == "refl") {
     #load in the image bands
     b1 = raster::as.matrix(raster::raster(imgfile, 1)) #band 1
     b2 = raster::as.matrix(raster::raster(imgfile, 2)) #band 2
     b4 = raster::as.matrix(raster::raster(imgfile, 4)) #band 4
   }
+  
   
   #crop the hillshade layer
   dem_ex  = raster::alignExtent(dem, ref, snap="near") #aligned the extent of the DEM to the image - raster package function
