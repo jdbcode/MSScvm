@@ -1,6 +1,6 @@
-#' Convert DN values to TOA reflectance
+#' Convert MSS DN values to TOA reflectance
 #'
-#' Convert DN values to TOA reflectance
+#' Convert MSS DN values to TOA reflectance.
 #' @param imgFile filename (character). Full path to *dn.tif image file produced by the \code{\link{MSSunpack}} function.  
 #' @details DN values are first converted to top-of-atmosphere (TOA) radiance using the equation found \href{http://landsat.usgs.gov/how_is_radiance_calculated.php}{here}.
 #' Then TOA radiance is converted to TOA reflectance using the equation found \href{http://landsathandbook.gsfc.nasa.gov/data_prod/prog_sect11_3.html}{here}.

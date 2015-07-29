@@ -1,10 +1,10 @@
 #' Create a DEM mosaic from a direcory of DEM's
 #'
-#' A helper function to create the large-extent DEM file required by the 'MSScvm' function.
+#' A helper function to create the large-extent DEM file required by the \code{\link{MSScvm}} function.
 #' @param dir directory name (character). Full path to a directory containing digital elevation model (DEM) files to be mosaiced.
-#' @param projRef filename (character). Full path to an image file produced by the \code{\link{MSSunpack}} function.
-#' @param srcNodata numeric. What is the background value of the DEM files in the directory. If there is no background value, use NA (default) 
-#' @param dstNodata numeric. Specify the value to represent background pixels in the mosaic DEM. -32768 is the default
+#' @param projRef filename (character). Full path to an image file produced by the \code{\link{MSSunpack}} function to be used as the projection reference.
+#' @param srcNodata numeric. Specify the background value of the DEM files in the directory. If there is no background value, use NA (default) .
+#' @param dstNodata numeric. Specify the value to represent background pixels in the mosaic DEM. -32768 is the default.
 #' @details The provided directory path should only contain decompressed digital elevation files from the same source (SRTM, NED, GTOPO, etc).
 #' The function will search the directory and include all files found in the mosaic. It is important that each file have the same background value
 #' and that it is correctly assigned to the 'srcNodata' parameter, if not, intersection between DEMs could have unexpected results. 

@@ -15,7 +15,7 @@ same directory as the 'imgFile' with the name equal to the image ID followed by 
 and rounded to the nearest integer to reduce the file size.
 }
 \description{
-Convert MSS DN values to TOA radiance
+Convert MSS DN values to TOA radiance.
 }
 \details{
 The equation used to convert DN to TOA radiance can be found \href{http://landsat.usgs.gov/how_is_radiance_calculated.php}{here}.

@@ -11,16 +11,16 @@ reprojectDEM(demFile, projRef, srcNodata = NA, dstNodata = -32768)
 
 \item{projRef}{filename (character). Full path to an image file produced by the \code{\link{MSSunpack}} function.}
 
-\item{srcNodata}{numeric. Specify the background value in the input DEM. If there is no background value, use NA (default)}
+\item{srcNodata}{numeric. Specify the background value in the input DEM. If there is no background value, use NA (default).}
 
-\item{dstNodata}{numeric. Specify the value to represent background pixels in the reprojected DEM. -32768 is the default}
+\item{dstNodata}{numeric. Specify the value to represent background pixels in the reprojected DEM. -32768 is the default.}
 }
 \value{
-A GeoTIFF raster file with '_reprojected.tif' replacing the last 4 characters of the input DEM filename
+A GeoTIFF raster file with '_reprojected.tif' replacing the last 4 characters of the input DEM filename.
 }
 \description{
 Reproject a DEM file to match the projection and pixel resolution of an image file. A helper function to make a DEM
-conform to the properties of an image file prior to using it as an input to the 'MSScvm' masking function
+conform to the properties of an image file prior to using it as an input to the \code{\link{MSScvm}} masking function.
 }
 \details{
 The DEM file will be adjusted to match the projection and pixel resolution of the 'proRef' image.

@@ -9,18 +9,18 @@ mosaicDEMs(dir, projRef, srcNodata = NA, dstNodata = -32768)
 \arguments{
 \item{dir}{directory name (character). Full path to a directory containing digital elevation model (DEM) files to be mosaiced.}
 
-\item{projRef}{filename (character). Full path to an image file produced by the \code{\link{MSSunpack}} function.}
+\item{projRef}{filename (character). Full path to an image file produced by the \code{\link{MSSunpack}} function to be used as the projection reference.}
 
-\item{srcNodata}{numeric. What is the background value of the DEM files in the directory. If there is no background value, use NA (default)}
+\item{srcNodata}{numeric. Specify the background value of the DEM files in the directory. If there is no background value, use NA (default) .}
 
-\item{dstNodata}{numeric. Specify the value to represent background pixels in the mosaic DEM. -32768 is the default}
+\item{dstNodata}{numeric. Specify the value to represent background pixels in the mosaic DEM. -32768 is the default.}
 }
 \value{
 A GeoTIFF raster file representing the union of all individual DEM files found in the provided directory path. The mosaic file will be written to the
 provided directory as "dem_mosaic.tif".
 }
 \description{
-A helper function to create the large-extent DEM file required by the 'MSScvm' function.
+A helper function to create the large-extent DEM file required by the \code{\link{MSScvm}} function.
 }
 \details{
 The provided directory path should only contain decompressed digital elevation files from the same source (SRTM, NED, GTOPO, etc).

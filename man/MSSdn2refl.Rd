@@ -2,7 +2,7 @@
 % Please edit documentation in R/MSSdn2refl.r
 \name{MSSdn2refl}
 \alias{MSSdn2refl}
-\title{Convert DN values to TOA reflectance}
+\title{Convert MSS DN values to TOA reflectance}
 \usage{
 MSSdn2refl(imgFile)
 }
@@ -15,7 +15,7 @@ same directory as the 'imgFile' with the name equal to the image ID followed by 
 and rounded to the nearest integer to reduce the file size.
 }
 \description{
-Convert DN values to TOA reflectance
+Convert MSS DN values to TOA reflectance.
 }
 \details{
 DN values are first converted to top-of-atmosphere (TOA) radiance using the equation found \href{http://landsat.usgs.gov/how_is_radiance_calculated.php}{here}.

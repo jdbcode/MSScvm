@@ -15,7 +15,7 @@ data.frame with image information.
 }
 \description{
 Uses the image file name to find the corresponding *MTL.txt image metadata file provided with LPSG Landsat images
-and returns a dataframe with image information
+and returns a data.frame with image information.
 }
 \examples{
 \dontrun{

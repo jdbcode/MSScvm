@@ -1,11 +1,17 @@
-#' Create a cloud and cloud shadow mask for Landsat MSS imagery
+#' Landsat MSS cloud and cloud shadow masking
 #' 
-#' Create a cloud and cloud shadow mask for Landsat MSS imagery
+#' Creates a cloud and cloud shadow mask for Landsat MSS imagery.
 #' @param imgDir directory name (character). Full path to a MSS image directory produced by the \code{\link{MSSunpack}} function.
 #' @param demFile filename (character). Full path to image-corresponding DEM file.
-#' @param classify logical. If TRUE clouds, cloud shadows, and clear pixels have unique values. If FALSE obscured pixels are value 0 and clear are 1.
-#' @details bla
-#' @return A binary raster with the same dimensions as the MSS image where pixels with value 1 represent clear pixel and 0 as obsured by either cloud or cloud shadow
+#' @param classify logical. If TRUE clouds, cloud shadows, and clear pixels have unique values (0 = clear, 1 = cloud shadow, 2 = cloud). 
+#' If FALSE obscured pixles = 0 and clear = 1.
+#' @details It is important that the input DEM file, specified by the 'demFile' parameter, be the same projection and pixel resolution as the
+#' input image. It must also be >= in spatial extent, relative to the image. The program will check for these attributes and throw an error message if 
+#' there is a violation. There are two helper functions to prepare a suitable DEM. Use the \code{\link{reprojectDEM}} function to ensure proper projection
+#' and pixel resolution of an exisiting DEM, and the \code{\link{mosaicDEMs}} function to create a mosaic from several DEMs to ensure proper extent, projection, 
+#' and pixel resolution. 
+#' @return A GeoTIFF raster image file with the same dimensions as the MSS image. The file will be placed in the
+#' 'imgDir' directory with the name equal to the image ID followed by '_msscvm'.
 #' @examples 
 #' \dontrun{
 #' 

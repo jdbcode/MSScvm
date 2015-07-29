@@ -1,6 +1,6 @@
 #' Convert MSS DN values to TOA radiance
 #'
-#' Convert MSS DN values to TOA radiance
+#' Convert MSS DN values to TOA radiance.
 #' @param imgFile filename (character). Full path to *dn.tif image file produced by the \code{\link{MSSunpack}} function.
 #' @details The equation used to convert DN to TOA radiance can be found \href{http://landsat.usgs.gov/how_is_radiance_calculated.php}{here}.
 #' @return A 4-band Landsat MSS GeoTIFF raster image file in units of top-of-atmosphere (TOA) radiance. The file will be placed in

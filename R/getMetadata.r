@@ -1,7 +1,7 @@
 #' Retrieve Landsat image metadata
 #' 
 #' Uses the image file name to find the corresponding *MTL.txt image metadata file provided with LPSG Landsat images
-#' and returns a dataframe with image information
+#' and returns a data.frame with image information.
 #' @param imgFile filename (character). Full path to a Landast LPGS MSS file that includes the 
 #' original image ID as the first block of characters. 
 #' @return data.frame with image information.
