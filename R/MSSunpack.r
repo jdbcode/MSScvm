@@ -23,7 +23,6 @@
 #' }
 #' @export
 
-
 MSSunpack = function(imgFile, toaRad=FALSE, toaRefl=FALSE, useL1G=FALSE){
   
   #figure out if this is an L1G image and stop the function according to the 'useL1G' parameter
