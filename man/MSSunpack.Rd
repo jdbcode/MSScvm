@@ -17,7 +17,7 @@ MSSunpack(imgFile, toaRad = FALSE, toaRefl = FALSE, useL1G = FALSE)
 }
 \value{
 A 4-band Landsat MSS GeoTIFF raster image file in DN units. If optional 'toaRad' and/or 'toaRefl'
-parameters are set to TRUE, then similar TOA radiance and reflectance image files will created. The files will be places in
+parameters are set to TRUE, then similar TOA radiance and reflectance image files will created. The files will be placed in
 the same location as the 'imgFile' with the name equal to the image ID plus an appended descriptor. Descriptors
 include 'dn' (digital number), 'toa_radiance' (TOA radiance), and 'toa_reflectance' (TOA reflectance).
 }
