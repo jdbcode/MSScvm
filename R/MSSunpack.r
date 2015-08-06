@@ -10,7 +10,7 @@
 #' from USGS through \href{http://rstudio.com}{EarthExplorer}. Note that DN values <= 1 are set to NA across all bands. 
 #' This mitigates a problem caused by bad columns on the east and west edge of images when mosaicing adjacent images together.  
 #' @return A 4-band Landsat MSS GeoTIFF raster image file in DN units. If optional 'toaRad' and/or 'toaRefl' 
-#' parameters are set to TRUE, then similar TOA radiance and reflectance image files will created. The files will be placed in
+#' parameters are set to TRUE, then similar TOA radiance and reflectance image files will created. The files will be places in
 #' the same location as the 'imgFile' with the name equal to the image ID plus an appended descriptor. Descriptors
 #' include 'dn' (digital number), 'toa_radiance' (TOA radiance), and 'toa_reflectance' (TOA reflectance).
 #' @seealso \code{\link{MSSdn2rad}}, \code{\link{MSSdn2refl}}

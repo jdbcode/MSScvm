@@ -18,4 +18,3 @@ SystemRequirements: GDAL binaries
 License: GPL-2
 URL: http://www.msscvm.jdbcode.com/
 LazyData: true
-Repository: CRAN
