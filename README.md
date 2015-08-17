@@ -4,6 +4,37 @@ An automated cloud and cloud shadow masking system for Landsat MSS imagery. It p
 
 http://www.msscvm.jdbcode.com/
 
+# Download
+MSScvm is installed by downloading the R package from GitHub and running the `install.packages` function in the R console command line. Copy the three lines of code from the version release below (grey box) and paste them into the R command line and press enter.
+
+*   the first line downloads the MSScvm package from GitHub
+*   the second installs it
+*   the third installs the dependent packages from CRAN
+
+Once MSScvm and its dependencies have been installed, simply type `library(MSScvm)` each time you start a new R session to activate it. For more details on installing, processing procedures, and outputs please see the [Guide](guide.html) page and the MSScvm R package manual file accompanying the MSScvm release.
+
+Note that GDAL must be installed on your system. Please see the Guide page for assistance.
+
+* * *
+
+#### Version 1.0.0 - 7/30/15
+
+<pre>download.file("https://github.com/jdbcode/MSScvm/releases/download/1.0.0/MSScvm_1.0.0.zip", "MSScvm")
+install.packages("MSScvm", repos=NULL)
+install.packages(c("gdalUtils","igraph","raster","rgdal","SDMTools"))</pre>
+
+[MSScvm manual](imgs/MSScvm-manual.pdf)
+
+* * *
+
+MSScvm was developed by the [Laboratory for Applications of Remote Sensing in Ecology](http://larse.forestry.oregonstate.edu/) at Oregon State University, Department of Forest Ecosystems and Society with funding from USDA Forest Service and USGS.
+
+Principle author and maintainer: Justin Braaten  
+ Contributing authors: Warren Cohen, Zhiqiang Yang  
+ GitHub: [https://github.com/jdbcode/MSScvm](https://github.com/jdbcode/MSScvm)
+
+
+# Guide
 ## Overview
 
 MSScvm will take Landsat LPGS MSS images and preform the following processes:
