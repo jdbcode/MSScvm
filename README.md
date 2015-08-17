@@ -153,10 +153,6 @@ Example of running the `MSScvm` function:
 
 A GeoTIFF raster image file will be placed in the <var>imgDir</var> directory with the name equal to the image ID followed by <samp>_msscvm.tif</samp>. If the <var>classify</var> parameter was set to <var>FALSE</var> then obscured pixels (cloud and cloud shadow) will be set to value 0 and clear-view pixel set to 1. If the <var>classify</var> parameter was set to <var>TRUE</var> then clear-view = 0, cloud shadow = 1, cloud = 2\.
 
-</div>
-
-<div class="guide_page_bottom"><a class="guide_anchor" id="auxiliary_functions"></a>
-
 ## Auxiliary functions
 
 MSScvm has functions to convert DN images to TOA radiance and reflectance images. These functions can optionally be called when running the `MSSunpack` function. If they were not run during unpacking, they can be run independently by running the `MSSdn2rad` and `MSSdn2refl` functions. The input (<var>imgFile</var>) for both functions is the full path to a <samp>*dn.tif</samp> file produced by running the `MSSunpack` function.
@@ -170,5 +166,3 @@ Create a TOA reflectance file from a <samp>*dn.tif</samp> file:
 <pre>MSSdn2refl(imgFile = "C:/mss/LM10360321973191AAA04/LM10360321973191AAA04_dn.tif")</pre>
 
 Both functions will output a 4-band GeoTIFF raster image. The file will be placed in the same directory as the input <var>imgFile</var> with the name equal to the image ID followed by <samp>"_toa_radiance.tif"</samp> or <samp>"_toa_reflectance.tif"</samp>. Note that the values for TOA radiance are scaled by 100 and rounded to the nearest integer and TOA reflectance is scaled by 10,000 and rounded to the nearest integer. This is done to reduce image file size while retaining some decimal precision.
-
-</div>
