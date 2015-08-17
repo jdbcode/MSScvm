@@ -4,8 +4,6 @@ An automated cloud and cloud shadow masking system for Landsat MSS imagery. It p
 
 http://www.msscvm.jdbcode.com/
 
-<div><a class="guide_anchor_top" id="top"></a>
-
 ## Overview
 
 MSScvm will take Landsat LPGS MSS images and preform the following processes:
@@ -33,10 +31,6 @@ If working with many images from the same Landsat footprint you will go through 
 
 MSScvm will automatically write outputs to the same directory location as the input image, with intuitive file names that include the original image ID and descriptions for each type (DN, TOA radiance, TOA reflectance, and mask). The images are in the GeoTIFF format in the native resolution and projection of the input image file, with background values set to NoData.
 
-</div>
-
-<div><a class="guide_anchor" id="system_requirements"></a>
-
 ## System requirements
 
 ### Computer
@@ -48,10 +42,6 @@ MSScvm was developed and tested on computers running Windows 7 64-bit OS with >=
 *   R
 *   RStudio
 *   GDAL
-
-</div>
-
-<div><a class="guide_anchor" id="install_software"></a>
 
 ## Install software
 
@@ -88,19 +78,11 @@ There are numerous ways you can install GDAL, the following is one example.
 5.  Click the _edit_ button
 6.  Get your cursor to the end of the line, add a semi-colon (;) and add the path to the GDAL installation location. Example: C:\GDAL (this may not actually be the location on your system)
 
-</div>
-
-<div><a class="guide_anchor" id="get_mss_images"></a>
-
 ## Get MSS images
 
 The MSS images processed by MSScvm should be compressed (.tar.gz) USGS LPGS images requested through [EarthExplorer](http://earthexplorer.usgs.gov/). This will ensure that the automated features of the program work correctly. They are contained in the _Landsat Archive_ directory under the _Data Sets_ tab on the EarthExplorer website.
 
 Follow the instructions on the EarthExplorer site for selecting and downloading MSS images. When you have received your images, place the unaltered <samp>*.tar.gz</samp> files in a directory that you have write permission for, since MSScvm will write files to this location (some government and institutional systems restrict user writing capabilities).
-
-</div>
-
-<div><a class="guide_anchor" id="prepare_mss_images"></a>
 
 ## Prepare MSS images
 
@@ -126,10 +108,6 @@ If <var>imgFile</var> input equals: <samp>"C:/mss/LM10360321973191AAA04.tar.gz"<
  output DN file will be: <samp>"C:/mss/LM10360321973191AAA04/LM10360321973191AAA04_dn.tif"</samp>,  
  output TOA radiance file will be: <samp>"C:/mss/LM10360321973191AAA04/LM10360321973191AAA04_toa_radiance.tif"</samp>,  
  output TOA reflectance file will be: <samp>"C:/mss/LM10360321973191AAA04/LM10360321973191AAA04_toa_reflectance.tif"</samp>
-
-</div>
-
-<div><a class="guide_anchor" id="prepare_dems"></a>
 
 ## Prepare DEMs
 
