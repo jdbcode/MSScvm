@@ -13,12 +13,10 @@ http://www.msscvm.jdbcode.com/
 		<li>Help prepare a required DEM file by providing convenient functions to mosaic, reproject, and resample</li>
 		<li>Create cloud and cloud shadow masks</li>
 	</ul>
-	<p>
-		The program uses the R programming environment and GDAL to execute the work. Therefore you must 
+	<p>The program uses the R programming environment and GDAL to execute the work. Therefore you must 
 		install both R and GDAL, and we recommended that you use RStudio as the front-end to interact with 
 		the R environment. This guide will walk you through installing the required software and R packages,
 		as well as demonstrate the use of MSScvm. Note that on the <a href="download.html">Download</a> page
 		the MSScvm R package manual can be downloaded. It contains standard R documentation for each function
 		described below. In the R command prompt you can also type <code>?</code> followed by a function name to display the 
-		function's help page. As in: <code>?MSSunpack</code>.
-	</p>
+		function's help page. As in: <code>?MSSunpack</code>.</p>
