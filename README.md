@@ -32,7 +32,6 @@ If working with many images from the same Landsat footprint you will go through 
 
 MSScvm will automatically write outputs to the same directory location as the input image, with intuitive file names that include the original image ID and descriptions for each type (DN, TOA radiance, TOA reflectance, and mask). The images are in the GeoTIFF format in the native resolution and projection of the input image file, with background values set to NoData.
 
-<span id="system_requirements"></span></a>
 System requirements
 -------------------
 
@@ -41,3 +40,55 @@ System requirements
 MSScvm was developed and tested on computers running Windows 7 64-bit OS with &gt;= 8 GB of RAM.
 
 ### Software
+
+-   R
+-   RStudio
+-   GDAL
+
+<span id="install_software"></span></a>
+Install software
+----------------
+
+MSScvm requires R, RStudio, and GDAL programs be installed on your computer. R is a free computer programming language for statistical computing and graphics. RStudio provides a convenient front-end interface to the R environment. GDAL is a program for reading, writing, and manipulating geospatial data.
+
+If you don’t already have a current version of these programs you’ll need to download and install them to your computer.
+
+### R
+
+Follow the install directions on the [R] website
+
+### RStudio
+
+Follow the install directions on the [RStudio] website
+
+### MSScvm
+
+See the [Download] page for instructions and the most current version
+
+### GDAL
+
+There are numerous ways you can install GDAL, the following is one example.
+
+<ol>
+<li>
+Go to <http://www.gisinternals.com/sdk/>
+</li>
+<li>
+Click on the *Downloads* link for the version that best matches your system (we use MSVC 2010 - x64)
+</li>
+<li>
+Download the *Generic installer for the GDAL core components*
+</li>
+<li>
+Run the installer
+</li>
+<li>
+Include GDAL in your system’s environmental variable *PATH*
+</li>
+1.  Open Windows *Control Panel* and select *System*
+2.  Click on *Advanced system settings*
+3.  Click the *Environmental Variables…* button
+4.  Under System variables, scroll down to the *Path* variable and click on it to highlight it
+5.  Click the *edit* button
+6.  Get your cursor to the end of the line, add a semi-colon (;) and add the path to the GDAL installation location. Example: C:\\GDAL (this may not actually be the location on your system)
+</ol>
