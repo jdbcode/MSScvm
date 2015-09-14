@@ -2,10 +2,10 @@
 
 An automated cloud and cloud shadow masking system for Landsat MSS imagery. It provides a means of more easily incorporating MSS imagery in large-area and time series analysis by providing an efficient way to prevent cloud and cloud shadow pixels from contaminating mosaics, composites, and time series analysis.
 
-Method publication:
+### Method publication:
 [Braaten, J. D., Cohen, W. B., & Yang, Z. (2015). Automated cloud and cloud shadow identification in Landsat MSS imagery for temperate ecosystems. Remote Sensing of Environment, 169, 128-138.](http://www.msscvm.jdbcode.com/imgs/braaten_et_al_2015_automated%20cloud_and_cloud_shadow_identification_in_landsat_mss_imagery_for_temperate_ecosystems.pdf)
 
-Website:
+### Website:
 http://www.msscvm.jdbcode.com/
 
 # Download
