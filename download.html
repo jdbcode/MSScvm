@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lan="en">
+	<head>
+		<title>Download - MSScvm</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>				
+				</button>
+				<a class="navbar-brand" href="index.html">MSScvm</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+				<li><a href="about.html">About</a></li>
+				<li><a href="guide.html">Guide</a></li>
+				<li class="active"><a href="download.html">Download</a></li>
+				<li><a href="examples.html">Examples</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		<div class="container">
+			<div class="row top_margin">
+				<div class="col-md-9">
+					<p>
+						MSScvm is installed by downloading the R package from GitHub and running the 
+						<code>install.packages</code> function in the R console command line. Copy the three lines of 
+						code from the version release below (grey box) and paste them into the R command line and press 
+						enter. 
+						<ul>
+							<li>the first line downloads the MSScvm package from GitHub</li>
+							<li>the second installs it</li>
+							<li>the third installs the dependent packages from CRAN</li>
+						</ul>
+						Once MSScvm and its dependencies have been installed, simply type <code>library(MSScvm)</code> each time 
+						you start a new R session to activate it. For more details on installing,
+						processing procedures, and outputs please see the <a href="guide.html">Guide</a> page and the  
+						MSScvm R package manual file accompanying the MSScvm release.
+					</p>
+					<p>Note that GDAL must be installed on your system. Please see the <a href="guide.html">Guide</a> page for assistance.</p>
+					<hr>
+					<h4>Version 1.0.0 - 7/30/15</h4>
+					<pre>
+download.file("https://github.com/jdbcode/MSScvm/releases/download/1.0.0/MSScvm_1.0.0.zip", "MSScvm")
+install.packages("MSScvm", repos=NULL)
+install.packages(c("gdalUtils","igraph","raster","rgdal","SDMTools"))</pre>
+					<a href="imgs/MSScvm-manual.pdf" class="btn btn-default" target="MSScvm-manual.pdf" role="button">MSScvm manual</a>
+					<hr class="top_margin">
+					<p>
+						MSScvm was developed by the <a href="http://larse.forestry.oregonstate.edu/">Laboratory for Applications of Remote Sensing in 
+						Ecology</a> at Oregon State University, Department of Forest Ecosystems and Society with 
+						funding from USDA Forest Service and USGS.
+					</p>
+					<p class="bottom_margin">
+						Principle author and maintainer: Justin Braaten<br>
+						Contributing authors: Warren Cohen, Zhiqiang Yang<br>
+						GitHub: <a href="https://github.com/jdbcode/MSScvm" target="_blank">https://github.com/jdbcode/MSScvm</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

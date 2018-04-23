@@ -1,0 +1,141 @@
+/*style for msscvm webpages*/
+
+/*navigation bar colors*/
+.navbar{
+	background-color: white;
+	background: white;
+}
+
+/*puts a little space at the end of pages and between the example images*/
+.bottom_margin{margin-bottom: 40px;}
+
+/*puts extra space at the bottom of the guide page so that final section link has the same top position as the others*/
+.guide_page_bottom{margin-bottom: 600px;}
+
+/*adds some space between the navbar and the page content*/
+.top_margin{margin-top:100px;}
+
+/*ensure that the code lines for downloading msscvm don't wrap*/
+.pre{overflow-x:scroll;}
+
+/*removes the top margin from some header elements*/
+.no_top_margin{margin-top:0px;}
+
+/*lowers the msscvm description on the home page for aesthetic*/
+#opening_descrip{margin-top:40px;}
+
+.img-wrapper{width:1140px; height:280px; background: url("imgs/spinner.gif") 50% 50% no-repeat}
+.spriteimg{background-color:transparent;}
+
+/*the example images and their cloud mask*/
+#indeximg{width:1140px; height:280px; background: url("imgs/indeximgsmall.png") 0px 0px no-repeat}
+#indeximg:hover {background: url("imgs/indeximgsmall.png") 0px -280px no-repeat}
+
+#example1{width:1140px; height:280px; background: url("imgs/example1.png") 0px 0px no-repeat}
+#example1:hover {background: url("imgs/example1.png") 0px -280px no-repeat}
+
+#example2{width:1140px; height:280px; background: url("imgs/example2.png") 0px 0px no-repeat}
+#example2:hover {background: url("imgs/example2.png") 0px -280px no-repeat}
+
+#example3{width:1140px; height:280px; background: url("imgs/example3.png") 0px 0px no-repeat}
+#example3:hover {background: url("imgs/example3.png") 0px -280px no-repeat}
+
+#example4{width:1140px; height:280px; background: url("imgs/example4.png") 0px 0px no-repeat}
+#example4:hover {background: url("imgs/example4.png") 0px -280px no-repeat}
+
+#example5{width:1140px; height:280px; background: url("imgs/example5.png") 0px 0px no-repeat}
+#example5:hover {background: url("imgs/example5.png") 0px -280px no-repeat}
+
+#example6{width:1140px; height:280px; background: url("imgs/example6.png") 0px 0px no-repeat}
+#example6:hover {background: url("imgs/example6.png") 0px -280px no-repeat}
+
+#example7{width:1140px; height:280px; background: url("imgs/example7.png") 0px 0px no-repeat}
+#example7:hover {background: url("imgs/example7.png") 0px -280px no-repeat}
+
+#example8{width:1140px; height:280px; background: url("imgs/example8.png") 0px 0px no-repeat}
+#example8:hover {background: url("imgs/example8.png") 0px -280px no-repeat}
+
+#example9{width:1140px; height:280px; background: url("imgs/example9.png") 0px 0px no-repeat}
+#example9:hover {background: url("imgs/example9.png") 0px -280px no-repeat}
+
+#example10{width:1140px; height:280px; background: url("imgs/example10.png") 0px 0px no-repeat}
+#example10:hover {background: url("imgs/example10.png") 0px -280px no-repeat}
+
+#example11{width:1140px; height:280px; background: url("imgs/example11.png") 0px 0px no-repeat}
+#example11:hover {background: url("imgs/example11.png") 0px -280px no-repeat}
+
+#example12{width:1140px; height:280px; background: url("imgs/example12.png") 0px 0px no-repeat}
+#example12:hover {background: url("imgs/example12.png") 0px -280px no-repeat}
+
+#example13{width:1140px; height:280px; background: url("imgs/example13.png") 0px 0px no-repeat}
+#example13:hover {background: url("imgs/example13.png") 0px -280px no-repeat}
+
+#example14{width:1140px; height:280px; background: url("imgs/example14.png") 0px 0px no-repeat}
+#example14:hover {background: url("imgs/example14.png") 0px -280px no-repeat}
+
+#example15{width:1140px; height:280px; background: url("imgs/example15.png") 0px 0px no-repeat}
+#example15:hover {background: url("imgs/example15.png") 0px -280px no-repeat}
+
+#example16{width:1140px; height:280px; background: url("imgs/example16.png") 0px 0px no-repeat}
+#example16:hover {background: url("imgs/example16.png") 0px -280px no-repeat}
+
+#example17{width:1140px; height:280px; background: url("imgs/example17.png") 0px 0px no-repeat}
+#example17:hover {background: url("imgs/example17.png") 0px -280px no-repeat}
+
+#example18{width:1140px; height:280px; background: url("imgs/example18.png") 0px 0px no-repeat}
+#example18:hover {background: url("imgs/example18.png") 0px -280px no-repeat}
+
+#example19{width:1140px; height:280px; background: url("imgs/example19.png") 0px 0px no-repeat}
+#example19:hover {background: url("imgs/example19.png") 0px -280px no-repeat}
+
+#example20{width:1140px; height:280px; background: url("imgs/example20.png") 0px 0px no-repeat}
+#example20:hover {background: url("imgs/example20.png") 0px -280px no-repeat}
+
+
+/*settings for the scrollspy guide page anchor at the top of the page*/
+.guide_anchor_top{
+	display: block;
+	height: 100px; /*same height as header*/
+	margin-top: -100px; /*same height as header*/
+	visibility: hidden;
+}
+
+/*settings for the scrollspy guide page anchors (not top)*/
+.guide_anchor{
+	display: block;
+	height: 60px; /*same height as header*/
+	margin-top: -60px; /*same height as header*/
+	visibility: hidden;
+}
+
+/*set position of the sidenav on the guide page and fix it*/
+.bs-docs-sidenav{
+	top: 100px;
+	position: fixed;
+}
+
+/*make the color of the navbar stuff grey*/
+.bs-docs-sidenav  > li.active > a, .bs-docs-sidenav  > li.active > a:hover, .bs-docs-sidenav  > li.active > a:focus {
+	background-color:#E7E7E7;
+}
+
+/*set the scrollbar to the right of the main text*/
+#myScrollspy{
+	display:inline-block;
+	margin-left:80px;
+}
+
+/*make the scrollbar disappear if less window is less than 1000px*/
+@media screen and (max-width: 1000px){
+  #myScrollspy{visibility: hidden;}
+}
+
+
+
+
+
+
+
+
+
+

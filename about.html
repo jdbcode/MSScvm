@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lan="en">
+	<head>
+		<title>About - MSScvm</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>				
+				</button>
+				<a class="navbar-brand" href="index.html">MSScvm</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="about.html">About</a></li>
+				<li><a href="guide.html">Guide</a></li>
+				<li><a href="download.html">Download</a></li>
+				<li><a href="examples.html">Examples</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		<div class="container">
+			<div class="row top_margin">
+				<div class="col-md-9">
+					<h3 style="margin-top:0px">What is MSScvm?</h3>
+					<p>
+						MSScvm (MSS clear-view-mask) is an automated cloud and cloud shadow identification system
+						for Landsat MSS imagery. It is an important contribution to the field of large-volume Landsat
+						image processing, as it provides an efficient means of identifying and removing cloud and cloud
+						shadow pixels from inclusion in image mosaics, composites, and time series analysis.
+					</p>
+					<p>
+						Similar cloud and cloud shadow identification systems for Landsat TM, ETM+, and OLI imagery have been developed and 
+						have played a crucial role in facilitating the current trend of large-area and dense time series analysis.
+					</p>
+					<p>
+						MSScvm was developed to provide the same service to MSS data so that it could more easily be incorporated with
+						TM, ETM+ and OLI data to produce 42+ year spectral chronologies representing the longest satellite-derived 
+						earth observation dataset. This extended record provides information on long-term Earth surface changes, 
+						including forest dynamics, desertification, urbanization, glacier recession, and coastal inundation. It also has 
+						the benefit of increasing the observation frequency of cyclic and sporadic events, such as drought, insect outbreaks, 
+						wildfire, and floods. Furthermore, utilization of the full 42+ years of Landsat imagery sets an example of effectual 
+						resource use and supports the need for continuity of Landsat missions to provide seamless spatial and temporal 
+						coverage into the future. 
+					</p>
+					<hr>
+
+					<h3>Why identify and mask clouds in satellite imagery?</h3>
+					<p>
+						Clouds and their shadows block or reduce satellite sensors' view of Earth surface features, 
+						obscuring spectral information characteristic of clear-sky viewing. This spectral deviation 
+						from clear-sky view can cause false change in a change detection analysis and conceals true 
+						land cover, which can reduce the accuracy and information content of map products where 
+						cloud-free images are not available. As a result, cloud and cloud shadow identification 
+						and masking are important and often necessary pre-processing steps. 
+					</p>
+					<hr>
+
+					<h3>How does it work?</h3>
+					<p>
+						The algorithm is specific to the unique spectral characteristics of MSS data, relying on a simple, 
+						rule-based approach. Clouds are identified based on green band brightness and the normalized difference 
+						between the green and red bands, while cloud shadows are identified by near infrared band darkness 
+						and cloud projection. A digital elevation model is incorporated to correct for topography-induced 
+						illumination variation and aid in identifying water.
+					</p>
+					<p>
+						The MSScvm program is written in the R programming language and distributed as an R package for straightforward 
+						installation and easy use.
+					</p>
+					<p>
+						Besides creating cloud and cloud shadow masks, MSScvm will also prepare MSS images downloaded from 
+						<a href="http://earthexplorer.usgs.gov/" target="_blank">EarthExplorer</a> by decompressing, stacking, and converting DN values to TOA radiance and/or reflectance.
+					</p>
+					<p>For more information, see the <a href="guide.html">Guide</a> and <a href="download.html">Download</a> pages.</p>
+					<hr>
+					
+					<h3>Publication</h3>
+					<a href="imgs/braaten_et_al_2015_automated cloud_and_cloud_shadow_identification_in_landsat_mss_imagery_for_temperate_ecosystems.pdf" target="_blank">
+						Braaten, J. D., Cohen, W. B., & Yang, Z. (2015). Automated cloud and cloud shadow identification in Landsat MSS imagery
+						for temperate ecosystems. Remote Sensing of Environment, 169, 128-138.
+					</a>
+					<hr>
+					
+					<h3>Application</h3>
+					<p class="bottom_margin">
+						MSScvm can be used as a stand-alone utility, but perhaps more significantly, it plays a vital role in the implementation of the <a href="http://landsatlinkr.jdbcode.com/index.html" target="_blank">LandsatLinkr</a> 
+						program, which is an automated system for processing large volumes of Landsat imagery and building long spectrally consistent 
+						chronologies across MSS, TM, ETM+, and OLI sensors. This is where the real benefit of the MSScvm program lies - check it out!
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
